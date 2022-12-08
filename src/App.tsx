@@ -1,15 +1,17 @@
-import { ConnectKitButton } from 'connectkit'
-import { useAccount } from 'wagmi'
+import { Drawer } from './components/drawer'
+import { cssReset, globalCss } from './stitches'
 
-import { Account } from './components'
+const globalStyles = globalCss({
+  ...cssReset,
+})
 
 export function App() {
-  const { isConnected } = useAccount()
+  globalStyles()
+
   return (
     <>
       <h1>wagmi + ConnectKit + Vite</h1>
-      <ConnectKitButton />
-      {isConnected && <Account />}
+      <Drawer />
     </>
   )
 }

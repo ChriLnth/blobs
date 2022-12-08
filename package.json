@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@radix-ui/colors": "^0.1.8",
+    "@radix-ui/react-dialog": "^1.0.2",
     "@stitches/react": "^1.2.8",
     "buffer": "^6.0.3",
     "connectkit": "^1.1.0",
@@ -16,6 +17,7 @@
     "process": "^0.11.10",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-router-dom": "^6.4.5",
     "util": "^0.12.4",
     "wagmi": "~0.8.2"
   },
