@@ -5,11 +5,11 @@ import { violet, mauve, violetDark, mauveDark, blackA } from '@radix-ui/colors'
 export const { styled, globalCss, theme, keyframes } = createStitches({
   theme: {
     colors: {
-      ...violet,
-      ...mauve,
+      ...violetDark,
+      ...mauveDark,
       ...blackA,
-      loContrast: '$mauve1',
-      hiContrast: '$mauve12',
+      loContrast: '$mauve12',
+      hiContrast: '$mauve1',
     },
     fontWeights: {
       hairline: '100',
