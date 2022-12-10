@@ -1,4 +1,4 @@
-import { cssReset, globalCss, styled, Title } from '@/stitches'
+import { cssReset, globalCss, styled } from '@/stitches'
 import { BrowserRouter, Navigate, Outlet, Route, Routes } from "react-router-dom"
 import { Header } from '@/components'
 import { Home } from './views'
