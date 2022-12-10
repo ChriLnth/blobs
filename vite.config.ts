@@ -15,4 +15,7 @@ export default defineConfig({
     },
   },
   plugins: [react(), svgr()],
+  build: {
+    minify: false
+  }
 })
