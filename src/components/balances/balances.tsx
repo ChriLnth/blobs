@@ -34,11 +34,13 @@ export const Balances = () => {
 
   const { data: matic } = useBalance({
     address,
+    watch: true
   })
 
   const { data: tUSDC } = useBalance({
     address,
-    token: ENV.contracts.tUSDC,
+    token: ENV.contracts.tUSDC as `0x${string}`,
+    watch: true
   })
 
   if (!matic && !tUSDC) return null

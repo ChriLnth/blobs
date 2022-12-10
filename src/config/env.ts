@@ -3,5 +3,6 @@ export const ENV = {
   contracts: {
     tUSDC: import.meta.env.VITE_TUSDC_ADDRESS as string,
     blobs: import.meta.env.VITE_BLOBS_ADDRESS as string,
+    faucet: import.meta.env.VITE_FAUCET_ADDRESS as string,
   }
 }

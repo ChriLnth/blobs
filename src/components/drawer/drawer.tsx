@@ -3,7 +3,7 @@ import * as Dialog from '@radix-ui/react-dialog'
 import { IconContainer, StyledContent, StyledOverlay } from './drawer.styled'
 import { BiWallet } from 'react-icons/bi'
 import { ConnectKitButton } from 'connectkit'
-import { Balances } from '@/components'
+import { Balances, Faucet } from '@/components'
 import { FaFaucet } from 'react-icons/fa'
 import { Container, Subtitle } from '@/stitches'
 
@@ -25,9 +25,7 @@ export const Drawer = () => {
         <ConnectKitButton />
         <Balances />
 
-        <Container css={{ marginTop: 'auto' }}>
-          <FaFaucet style={{ fontSize: 20, color: '#6e56cf', marginRight: 10 }} /><Subtitle>Get tUSDC</Subtitle>
-        </Container>
+        <Faucet />
       </StyledContent>
 
     </Dialog.Root>
