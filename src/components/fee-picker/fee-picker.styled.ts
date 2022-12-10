@@ -8,18 +8,3 @@ export const Container = styled('div', {
   marginTop: '$4',
 })
 
-export const StyledFee = styled(Subtitle, {
-  cursor: 'pointer',
-
-  '&:hover': {
-    color: '$violet10'
-  },
-
-  variants: {
-    selected: {
-      true: {
-        color: '$violet9'
-      }
-    }
-  }
-})

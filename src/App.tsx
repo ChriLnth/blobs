@@ -1,6 +1,5 @@
 import { cssReset, globalCss, styled, Title } from '@/stitches'
 import { BrowserRouter, Navigate, Outlet, Route, Routes } from "react-router-dom"
-import { useAccount } from 'wagmi'
 import { Header } from '@/components'
 import { Home } from './views'
 import { Collection } from './views/collection/collection'
@@ -18,7 +17,7 @@ const Root = styled('div', {
   bottom: 0,
   left: 0,
   right: 0,
-  padding: '$4'
+  overflowX: 'hidden',
 })
 
 export function App() {

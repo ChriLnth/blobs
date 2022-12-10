@@ -1,5 +1,5 @@
-import { Subtitle } from "@/stitches"
-import { Container, StyledFee } from "./fee-picker.styled"
+import { Link, Subtitle } from "@/stitches"
+import { Container } from "./fee-picker.styled"
 
 export type FeeValue = 'MATIC' | 'tUSDC'
 
@@ -15,7 +15,7 @@ type FeePickerProps = {
 }
 
 const Fee = ({ value, selected, onClick }: FeeProps) =>
-  <StyledFee selected={value === selected} onClick={onClick}>{value}</StyledFee>
+  <Link selected={value === selected} onClick={onClick}>{value}</Link>
 
 export const FeePicker = ({ selected, onChange }: FeePickerProps) => {
   return (
