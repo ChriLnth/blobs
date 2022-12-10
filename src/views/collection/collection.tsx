@@ -1,6 +1,6 @@
-import { NftProps, NftDisplay } from "@/components"
+import { NftProps, NftDisplay, Spinner } from "@/components"
 import { getUserBlobs } from "@/services"
-import { Center, Title } from "@/stitches"
+import { MainContent, Title } from "@/stitches"
 import { useEffect, useState } from "react"
 import { useAccount } from "wagmi"
 import { Container } from "./collection.styled"
@@ -23,11 +23,15 @@ export const Collection = () => {
   }, [address])
 
   return (
-    <Center>
+    <MainContent css={{
+      '@bp2': {
+        height: 'auto',
+      }
+    }}>
       {
         loading
           ?
-          <Title>Loading...</Title>
+          <Spinner />
           :
           collection.length > 0
             ?
@@ -39,6 +43,6 @@ export const Collection = () => {
             :
             <Title>You don't have any Blobs yet :(</Title>
       }
-    </Center>
+    </MainContent>
   )
 }

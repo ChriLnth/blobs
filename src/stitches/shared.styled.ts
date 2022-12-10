@@ -10,6 +10,7 @@ export const Subtitle = styled('span', {
   fontWeight: '$semibold',
   fontSize: '$md',
   color: '$mauve12',
+  width: 'fit-content',
 })
 
 export const Text = styled('span', {
@@ -34,14 +35,28 @@ export const Container = styled('div', {
   }
 })
 
-export const Center = styled('div', {
-  position: 'absolute',
-  top: '50%',
-  left: '50%',
-  marginRight: '-50%',
-  transform: 'translate(-50%, -50%)',
+export const Link = styled(Subtitle, {
+  cursor: 'pointer',
+
+  '&:hover': {
+    color: '$violet10'
+  },
+
+  variants: {
+    selected: {
+      true: {
+        color: '$violet9'
+      }
+    }
+  }
+})
+
+export const MainContent = styled('div', {
+  width: '100%',
+  height: 'calc(100vh - 60px)',
   display: 'flex',
-  justifyContent: 'center',
   alignItems: 'center',
+  justifyContent: 'center',
   flexDirection: 'column',
+  backgroundColor: '$mauve1',
 })

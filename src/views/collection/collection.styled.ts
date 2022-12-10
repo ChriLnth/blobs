@@ -5,7 +5,8 @@ export const Container = styled('div', {
   alignItems: 'center',
   justifyContent: 'center',
   flexDirection: 'row',
-  width: 420,
+  width: '50vw',
   flexWrap: 'wrap',
   gap: 50,
+  padding: '50px 0',
 })

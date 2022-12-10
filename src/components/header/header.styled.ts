@@ -5,7 +5,8 @@ export const Container = styled('div', {
   alignItems: 'center',
   justifyContent: 'center',
   flexDirection: 'row',
-
+  height: 60,
+  padding: '$4',
   width: '100%',
 })
 
