@@ -3,6 +3,7 @@ import { BrowserRouter, Navigate, Outlet, Route, Routes } from "react-router-dom
 import { Header } from '@/components'
 import { Home } from './views'
 import { Collection } from './views/collection/collection'
+import { useAccount } from 'wagmi'
 
 const globalStyles = globalCss({
   ...cssReset,
@@ -33,10 +34,11 @@ export function App() {
               <Home />
             }
           />
+
           <Route
             path="/collection"
             element={
-              <Collection />
+              <ProtectedRoute><Collection /></ProtectedRoute>
             }
           />
           <Route path="*" element={<Navigate to="/home" />} />
@@ -44,6 +46,16 @@ export function App() {
       </Routes>
     </BrowserRouter>
   )
+}
+
+const ProtectedRoute = ({ children }: { children: JSX.Element }) => {
+  const { isConnected } = useAccount()
+
+  if (!isConnected) {
+    return <Navigate to="/home" />
+  }
+
+  return children
 }
 
 const Layout = () => (
