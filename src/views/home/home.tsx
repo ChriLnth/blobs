@@ -145,7 +145,6 @@ export const Home = () => {
                 ?
                 <SuccessMint>
                   <Subtitle>Successfully minted.</Subtitle>
-                  <Link onClick={() => navigate('collection')}>Click here to see your new Blob :)</Link>
                 </SuccessMint>
                 :
                 <FeePicker selected={fee} onChange={handleChangeFee} />
