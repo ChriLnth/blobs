@@ -4,8 +4,6 @@ import { IconContainer, StyledContent, StyledOverlay } from './drawer.styled'
 import { BiWallet } from 'react-icons/bi'
 import { ConnectKitButton } from 'connectkit'
 import { Balances, Faucet } from '@/components'
-import { FaFaucet } from 'react-icons/fa'
-import { Container, Subtitle } from '@/stitches'
 
 export const Drawer = () => {
   const [open, setOpen] = useState(false)

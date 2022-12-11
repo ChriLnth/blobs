@@ -6,10 +6,10 @@ export type NftProps = {
   image: string,
 }
 
-export const NftDisplay = ({ id, name, image }: NftProps) => {
+export const NftDisplay = ({ name, image }: NftProps) => {
   return (
     <div>
-      <img src={image} />
+      <img src={image} alt='blob' />
       <Subtitle>{name}</Subtitle>
     </div>
   )

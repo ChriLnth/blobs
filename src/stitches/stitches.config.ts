@@ -1,6 +1,5 @@
-import { createStitches, createTheme } from '@stitches/react'
-
-import { violet, mauve, violetDark, mauveDark, blackA } from '@radix-ui/colors'
+import { createStitches } from '@stitches/react'
+import { violetDark, mauveDark, blackA } from '@radix-ui/colors'
 
 export const { styled, globalCss, theme, keyframes } = createStitches({
   theme: {
@@ -56,14 +55,5 @@ export const { styled, globalCss, theme, keyframes } = createStitches({
     bp1: '(max-width: 640px)',
     bp2: '(max-width: 768px)',
     bp3: '(max-width: 1024px)',
-  },
-})
-
-export const darkTheme = createTheme({
-  colors: {
-    ...violetDark,
-    ...mauveDark,
-    loContrast: '$mauve12',
-    hiContrast: '$mauve1',
   },
 })

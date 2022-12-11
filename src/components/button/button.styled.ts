@@ -38,35 +38,6 @@ export const StyledButton = styled('button', {
           outline: 'none',
         },
       },
-      outline: {
-        backgroundColor: 'transparent',
-        color: '$purple9',
-        border: '2px solid $purple9',
-        width: 'fit-content',
-        height: 36,
-        padding: '10px 20px',
-
-        '& svg': {
-          fill: 'transparent',
-        },
-        '&:hover, &:active': {
-          '&:not([disabled])': {
-            background: '$violet9',
-            color: 'white',
-          }
-        },
-        '&:disabled': {
-          opacity: 0.6,
-          cursor: 'not-allowed',
-
-          '& svg': {
-            fill: '$mauve6',
-          },
-        },
-        '&:focus-visible': {
-          outline: 'none',
-        },
-      },
     },
   },
 })

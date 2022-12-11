@@ -13,11 +13,6 @@ export const Subtitle = styled('span', {
   width: 'fit-content',
 })
 
-export const Text = styled('span', {
-  fontSize: '$sm',
-  color: '$mauve12',
-})
-
 export const Container = styled('div', {
   width: '100%',
   display: 'flex',

@@ -1,5 +1,5 @@
 import { blobsAbi } from "@/abis"
-import { Button, FeePicker, FeeValue, Spinner } from "@/components"
+import { Button, FeePicker, FeeValue } from "@/components"
 import { ENV } from "@/config"
 import { Link, MainContent, Subtitle, Title } from "@/stitches"
 import { ConnectKitButton } from "connectkit"
@@ -43,8 +43,6 @@ export const Home = () => {
   }
 
 
-
-
   const { config: mintConfig } = usePrepareContractWrite({
     address: ENV.contracts.blobs,
     abi: blobsAbi,
@@ -66,8 +64,6 @@ export const Home = () => {
   }, [isSuccess])
 
 
-
-
   const { config: configApprove } = usePrepareContractWrite({
     address: ENV.contracts.tUSDC,
     abi: erc20ABI,
@@ -86,9 +82,7 @@ export const Home = () => {
 
   useEffect(() => {
     if (isSuccessApprove) write?.()
-  }, [isSuccessApprove])
-
-
+  }, [isSuccessApprove, write])
 
 
   const { data: nextMintData } = useContractRead({
@@ -106,7 +100,6 @@ export const Home = () => {
   const renderer = ({ minutes, seconds }: { minutes: number, seconds: number }) => {
     return <span>{minutes.toString().padStart(2, '0')}:{seconds.toString().padStart(2, '0')}</span>
   }
-
 
   return (
     <MainContent>

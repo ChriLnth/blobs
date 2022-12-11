@@ -27,13 +27,16 @@ export const getUserBlobs = async (address: string) => {
           image: b.metadata.image,
         }
       })
-      
-      return formatted
+
+    return formatted
   }
 
   return []
 }
 
+// could use this to get minted timestamp but i dont like how it looks
+
+/*
 export const getBlobMetadata = async (tokenId: string) => {
   const contract = ENV.contracts.blobs
   const url = `${baseURL}/getNFTMetadata?contractAddress=${contract}&tokenId=${tokenId}&tokenType=erc721`
@@ -44,5 +47,4 @@ export const getBlobMetadata = async (tokenId: string) => {
     headers: {}
   })
 
-  console.log('response', response.data)
-}
+}*/

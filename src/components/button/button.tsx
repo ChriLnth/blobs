@@ -1,7 +1,7 @@
 import { StyledButton } from './button.styled'
 
 type ButtonProps = {
-  type: 'primary' | 'outline',
+  type: 'primary',
   value: React.ReactNode,
   onClick?: () => void,
   disabled?: boolean,
