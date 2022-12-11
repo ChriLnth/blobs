@@ -43,7 +43,7 @@ export const Balances = () => {
     watch: true
   })
 
-  if (!matic && !tUSDC) return null
+  if (!matic || !tUSDC) return null
 
   return (
     <BalanceContainer>
