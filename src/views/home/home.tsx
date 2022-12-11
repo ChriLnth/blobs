@@ -82,7 +82,7 @@ export const Home = () => {
 
   useEffect(() => {
     if (isSuccessApprove) write?.()
-  }, [isSuccessApprove, write])
+  }, [isSuccessApprove])
 
 
   const { data: nextMintData } = useContractRead({
