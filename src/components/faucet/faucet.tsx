@@ -13,7 +13,7 @@ export const Faucet = () => {
     functionName: 'dripERC20Tokens',
     overrides: {
       gasLimit: BigNumber.from('1000000'),
-      gasPrice: BigNumber.from('10000000000'),
+      gasPrice: BigNumber.from('20000000000'),
     }
   })
 
